@@ -32,26 +32,31 @@ export function Navigation({ language, setLanguage, translations }: NavigationPr
                         <span className="text-2xl font-bold text-gray-900">AJ</span>
                     </div>
 
-                    {/* Desktop Navigation */}
-                    <div className="hidden md:block">
-                        <div className="ml-10 flex items-baseline space-x-8">
-                            <button
-                                onClick={() => scrollToSection("hero")}
-                                className="text-gray-600 hover:text-[hsl(188.74deg_94.5%_42.75%)] px-3 py-2 text-sm font-medium transition-colors"
-                            >
-                                {translations.home}
-                            </button>
-                            <button
-                                onClick={() => scrollToSection("contact")}
-                                className="text-gray-600 hover:text-[hsl(188.74deg_94.5%_42.75%)] px-3 py-2 text-sm font-medium transition-colors"
-                            >
-                                {translations.contact}
-                            </button>
-                        </div>
+                    {/* Desktop Navigation - Moved to right side */}
+                    <div className="hidden md:flex items-center space-x-6">
+                        <button
+                            onClick={() => scrollToSection("hero")}
+                            className="text-gray-600 hover:text-[hsl(188.74deg_94.5%_42.75%)] px-3 py-2 text-sm font-medium transition-colors"
+                        >
+                            {translations.home}
+                        </button>
+                        <button
+                            onClick={() => scrollToSection("contact")}
+                            className="text-gray-600 hover:text-[hsl(188.74deg_94.5%_42.75%)] px-3 py-2 text-sm font-medium transition-colors"
+                        >
+                            {translations.contact}
+                        </button>
+                        <button
+                            onClick={() => setLanguage(language === "pl" ? "en" : "pl")}
+                            className="flex items-center space-x-1 text-sm font-medium text-gray-600 hover:text-[hsl(188.74deg_94.5%_42.75%)]"
+                        >
+                            <Globe className="w-4 h-4" />
+                            <span>{language.toUpperCase()}</span>
+                        </button>
                     </div>
 
-                    {/* Language Toggle & Mobile Menu */}
-                    <div className="flex items-center space-x-4">
+                    {/* Mobile Menu Button & Language Toggle */}
+                    <div className="flex items-center space-x-4 md:hidden">
                         <button
                             onClick={() => setLanguage(language === "pl" ? "en" : "pl")}
                             className="flex items-center space-x-1 text-sm font-medium text-gray-600 hover:text-[hsl(188.74deg_94.5%_42.75%)]"
@@ -60,11 +65,9 @@ export function Navigation({ language, setLanguage, translations }: NavigationPr
                             <span>{language.toUpperCase()}</span>
                         </button>
 
-                        <div className="md:hidden">
-                            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-gray-600 hover:text-gray-900">
-                                {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-                            </button>
-                        </div>
+                        <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-gray-600 hover:text-gray-900">
+                            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                        </button>
                     </div>
                 </div>
             </div>
