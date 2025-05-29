@@ -5,20 +5,15 @@ export const translations = {
             contact: "Kontakt",
         },
         hero: {
-            greeting: "Cześć, jestem Alex Johnson",
-            title: "Full-Stack Developer i UI/UX Designer",
-            subtitle: "Tworzę oszałamiające, wydajne strony internetowe, które przynoszą rezultaty dla Twojego biznesu",
+            greeting: "Cześć, jestem Rafał",
+            title: "Tworzę strony internetowe od A do Z",
+            subtitle: "Pomagam firmom i osobom prywatnym zaistnieć w sieci",
             cta: "Rozpocznij Projekt",
             ctaSecondary: "Zobacz Moje Prace",
-            stats: {
-                projects: "Ukończonych Projektów",
-                clients: "Zadowolonych Klientów",
-                experience: "Lat Doświadczenia",
-            },
         },
         services: {
             title: "Mój Proces Rozwoju",
-            subtitle: "Od koncepcji do uruchomienia - tak realizuję Twoją wizję",
+            subtitle: "Od pomysłu do gotowej strony — wspólnie stworzymy coś dopasowanego do Twoich potrzeb",
             steps: [
                 {
                     title: "Odkrywanie i Strategia",
@@ -84,20 +79,15 @@ export const translations = {
             contact: "Contact",
         },
         hero: {
-            greeting: "Hi, I'm Alex Johnson",
-            title: "Full-Stack Developer & UI/UX Designer",
-            subtitle: "I create stunning, high-performance websites that drive results for your business",
+            greeting: "Hi, I'm Rafał",
+            title: "I create websites from A to Z",
+            subtitle: "I help businesses and individuals establish their online presence",
             cta: "Start Your Project",
             ctaSecondary: "View My Work",
-            stats: {
-                projects: "Projects Completed",
-                clients: "Happy Clients",
-                experience: "Years Experience",
-            },
         },
         services: {
             title: "My Development Process",
-            subtitle: "From concept to launch, here's how I bring your vision to life",
+            subtitle: "From idea to launch — let's build something that fits your needs perfectly",
             steps: [
                 {
                     title: "Discovery & Strategy",

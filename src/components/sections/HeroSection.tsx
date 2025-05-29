@@ -13,11 +13,6 @@ interface HeroSectionProps {
         subtitle: string
         cta: string
         ctaSecondary: string
-        stats: {
-            projects: string
-            clients: string
-            experience: string
-        }
     }
 }
 
@@ -173,7 +168,7 @@ export function HeroSection({ translations }: HeroSectionProps) {
                             {translations.subtitle}
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12">
+                        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                             <Button
                                 size="lg"
                                 onClick={() => scrollToSection("contact")}
@@ -189,21 +184,6 @@ export function HeroSection({ translations }: HeroSectionProps) {
                             >
                                 {translations.ctaSecondary}
                             </Button>
-                        </div>
-
-                        <div className="grid grid-cols-3 gap-4 sm:gap-8 max-w-md">
-                            <div className="text-center">
-                                <div className="text-2xl sm:text-3xl font-bold text-[hsl(188.74deg_94.5%_42.75%)]">50+</div>
-                                <div className="text-xs sm:text-sm text-gray-400">{translations.stats.projects}</div>
-                            </div>
-                            <div className="text-center">
-                                <div className="text-2xl sm:text-3xl font-bold text-[hsl(188.74deg_94.5%_42.75%)]">30+</div>
-                                <div className="text-xs sm:text-sm text-gray-400">{translations.stats.clients}</div>
-                            </div>
-                            <div className="text-center">
-                                <div className="text-2xl sm:text-3xl font-bold text-[hsl(188.74deg_94.5%_42.75%)]">5+</div>
-                                <div className="text-xs sm:text-sm text-gray-400">{translations.stats.experience}</div>
-                            </div>
                         </div>
                     </motion.div>
 
