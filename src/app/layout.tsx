@@ -7,13 +7,13 @@ import { Toaster } from "@/components/ui/toaster"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-    title: "Alex Johnson - Full-Stack Developer & UI/UX Designer",
+    title: "Rafał Wiżeń - Full-Stack Developer & UI/UX Designer",
     description:
         "Profesjonalny web developer i designer tworzący oszałamiające, wydajne strony internetowe, które przynoszą rezultaty dla Twojego biznesu.",
     keywords: "web developer, full-stack developer, UI/UX designer, React, Next.js, TypeScript, Warszawa",
-    authors: [{ name: "Alex Johnson" }],
+    authors: [{ name: "Rafał Wiżeń" }],
     openGraph: {
-        title: "Alex Johnson - Full-Stack Developer & UI/UX Designer",
+        title: "Rafał Wiżeń - Full-Stack Developer & UI/UX Designer",
         description:
             "Profesjonalny web developer i designer tworzący oszałamiające, wydajne strony internetowe, które przynoszą rezultaty dla Twojego biznesu.",
         type: "website",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Alex Johnson - Full-Stack Developer & UI/UX Designer",
+        title: "Rafał Wiżeń - Full-Stack Developer & UI/UX Designer",
         description:
             "Profesjonalny web developer i designer tworzący oszałamiające, wydajne strony internetowe, które przynoszą rezultaty dla Twojego biznesu.",
     },

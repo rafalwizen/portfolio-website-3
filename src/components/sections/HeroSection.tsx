@@ -74,7 +74,7 @@ export function HeroSection({ translations }: HeroSectionProps) {
                 <div className="hidden md:block absolute top-20 left-10 text-green-400 font-mono text-sm opacity-30 animate-pulse">
                     {"const developer = {"}
                     <br />
-                    {'  name: "Alex Johnson",'}
+                    {'  name: "Rafał Wiżeń",'}
                     <br />
                     {'  skills: ["React", "Node.js"]'}
                     <br />
@@ -202,7 +202,7 @@ export function HeroSection({ translations }: HeroSectionProps) {
                             <div className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-[hsl(188.74deg_94.5%_42.75%)] shadow-2xl">
                                 <Image
                                     src="/placeholder.svg?height=400&width=400"
-                                    alt="Alex Johnson - Full-Stack Developer"
+                                    alt="Rafał Wiżeń - Full-Stack Developer"
                                     width={400}
                                     height={400}
                                     className="w-full h-full object-cover"

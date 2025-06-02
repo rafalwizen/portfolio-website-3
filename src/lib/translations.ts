@@ -67,9 +67,9 @@ export const translations = {
                 sending: "Wysyłanie...",
             },
             info: {
-                email: "alex@example.com",
-                phone: "+48 123 456 789",
-                location: "Warszawa, Polska",
+                email: "rafal.wizen@gmail.com",
+                phone: "+48 726 593 099",
+                location: "Tarnowskie Góry, Polska",
             },
         },
     },
@@ -138,9 +138,11 @@ export const translations = {
                 sending: "Sending...",
             },
             info: {
-                email: "alex@example.com",
-                phone: "+1 (555) 123-4567",
-                location: "San Francisco, CA",
+                info: {
+                    email: "rafal.wizen@gmail.com",
+                    phone: "+48 726 593 099",
+                    location: "Tarnowskie Góry, Poland",
+                },
             },
         },
     },

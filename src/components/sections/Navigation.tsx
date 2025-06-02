@@ -29,7 +29,7 @@ export function Navigation({ language, setLanguage, translations }: NavigationPr
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     <div className="flex items-center">
-                        <span className="text-2xl font-bold text-gray-900">AJ</span>
+                        <span className="text-2xl font-bold text-gray-900">RW</span>
                     </div>
 
                     {/* Desktop Navigation - Moved to right side */}
