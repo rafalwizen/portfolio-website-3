@@ -63,7 +63,7 @@ export function HeroSection({ translations }: HeroSectionProps) {
     return (
         <section
             id="hero"
-            className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-black pt-16"
+            className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-black pt-16 pb-20"
         >
             {/* Technical Background Elements */}
             <div className="absolute inset-0 z-0">
@@ -149,8 +149,8 @@ export function HeroSection({ translations }: HeroSectionProps) {
                 )}
             </div>
 
-            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
                     {/* Content Side */}
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
@@ -192,7 +192,7 @@ export function HeroSection({ translations }: HeroSectionProps) {
                         initial={{ opacity: 0, x: 30 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="relative flex justify-center lg:justify-end order-1 lg:order-2 mb-6 lg:mb-0"
+                        className="relative flex justify-center lg:justify-end order-1 lg:order-2"
                     >
                         <div className="relative">
                             {/* Glowing Border Effect */}
@@ -228,7 +228,7 @@ export function HeroSection({ translations }: HeroSectionProps) {
             <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-                className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+                className="absolute bottom-20 md:bottom-8 left-1/2 transform -translate-x-1/2"
             >
                 <ChevronDown className="w-6 h-6 text-[hsl(188.74deg_94.5%_42.75%)]" />
             </motion.div>
