@@ -16,26 +16,22 @@ export const translations = {
             subtitle: "Od pomysłu do gotowej strony — wspólnie stworzymy coś dopasowanego do Twoich potrzeb",
             steps: [
                 {
-                    title: "Odkrywanie i Strategia",
-                    description:
-                        "Omawiamy Twoje cele, grupę docelową i wymagania projektu, aby stworzyć strategiczną mapę drogową.",
+                    title: "Wstępny kontakt i ustalenia",
+                    description: "Pierwszy krok to poznanie Twoich potrzeb. Ustalamy cele i wizję strony, aby jak najszybciej osiągnąć jak najlepszy efekt końcowy."
                 },
                 {
-                    title: "Projektowanie i Prototypowanie",
-                    description:
-                        "Tworzę szkielety i projekty wysokiej jakości, które są zgodne z Twoją marką i potrzebami użytkowników.",
+                    title: "Pierwsza wersja strony",
+                    description: "Na bazie ustaleń buduję pierwszą wersję strony – w pełni funkcjonalną i działającą na wszystkich urządzeniach – oraz instaluję ją na mojej domenie, abyś mógł ją osobiście przetestować."
                 },
                 {
-                    title: "Rozwój i Testowanie",
-                    description:
-                        "Rozwój czystego, skalowalnego kodu z rygorystycznymi testami na wszystkich urządzeniach i przeglądarkach.",
+                    title: "Wspólne dopracowanie",
+                    description: "Wprowadzam zmiany na podstawie Twoich opinii, a jeżeli zajdzie taka potrzeba – zmieniamy kierunek rozwoju strony. Kontynuujemy ten proces, aż uzyskamy efekt, z którego będziesz w pełni zadowolony."
                 },
                 {
-                    title: "Uruchomienie i Wsparcie",
-                    description:
-                        "Bezproblemowe wdrożenie z ciągłym wsparciem i konserwacją dla zapewnienia optymalnej wydajności.",
-                },
-            ],
+                    title: "Publikacja i gotowe!",
+                    description: "Instaluję stronę na Twojej domenie i… od tej pory jesteś właścicielem w pełni działającej witryny!"
+                }
+            ]
         },
         about: {
             title: "Dlaczego Warto Mnie Wybrać?",
@@ -90,23 +86,22 @@ export const translations = {
             subtitle: "From idea to launch — let's build something that fits your needs perfectly",
             steps: [
                 {
-                    title: "Discovery & Strategy",
-                    description:
-                        "We discuss your goals, target audience, and project requirements to create a strategic roadmap.",
+                    title: "Initial Contact and Planning",
+                    description: "The first step is understanding your needs. Together we define the goals and vision for your website to achieve the best possible result as quickly as possible."
                 },
                 {
-                    title: "Design & Prototyping",
-                    description: "I create wireframes and high-fidelity designs that align with your brand and user needs.",
+                    title: "First Version of the Website",
+                    description: "Based on our discussion, I build the first version of your website – fully functional and responsive on all devices – and host it on my domain so you can test it yourself."
                 },
                 {
-                    title: "Development & Testing",
-                    description: "Clean, scalable code development with rigorous testing across all devices and browsers.",
+                    title: "Refinement Together",
+                    description: "I apply changes based on your feedback, and if needed, we adjust the direction of the project. We continue this process until you're fully satisfied with the result."
                 },
                 {
-                    title: "Launch & Support",
-                    description: "Seamless deployment with ongoing support and maintenance to ensure optimal performance.",
-                },
-            ],
+                    title: "Launch and Done!",
+                    description: "I install the site on your domain and… from now on, you’re the proud owner of a fully working website!"
+                }
+            ]
         },
         about: {
             title: "Why Choose Me?",
