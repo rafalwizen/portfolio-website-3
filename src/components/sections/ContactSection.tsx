@@ -172,7 +172,7 @@ export function ContactSection({ translations }: ContactSectionProps) {
                             <div className="pt-6 border-t border-gray-200">
                                 <div className="flex space-x-4">
                                     <a
-                                        href="https://github.com"
+                                        href="https://github.com/rafalwizen"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="w-12 h-12 bg-[hsl(188.74deg_94.5%_42.75%)]/10 rounded-lg flex items-center justify-center hover:bg-[hsl(188.74deg_94.5%_42.75%)] hover:text-white transition-colors"
@@ -180,7 +180,7 @@ export function ContactSection({ translations }: ContactSectionProps) {
                                         <Github className="w-6 h-6" />
                                     </a>
                                     <a
-                                        href="https://linkedin.com"
+                                        href="https://www.linkedin.com/in/rafał-wiżeń-637357258"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="w-12 h-12 bg-[hsl(188.74deg_94.5%_42.75%)]/10 rounded-lg flex items-center justify-center hover:bg-[hsl(188.74deg_94.5%_42.75%)] hover:text-white transition-colors"
