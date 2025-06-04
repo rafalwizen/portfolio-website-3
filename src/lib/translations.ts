@@ -37,12 +37,9 @@ export const translations = {
             title: "Dlaczego Warto Mnie Wybrać?",
             subtitle: "Łączę wiedzę techniczną z kreatywną wizją, aby dostarczać wyjątkowe rezultaty",
             skills: [
-                "Nowoczesne Frameworki Frontend",
-                "Rozwój Backend",
-                "Projektowanie Baz Danych",
-                "Wdrażanie w Chmurze",
-                "Projektowanie UI/UX",
-                "Optymalizacja Wydajności",
+                "Nie pobieram żadnych zaliczek — stronę opłacasz dopiero wtedy, gdy jesteś w pełni zadowolony z efektu.",
+                "Zawsze instaluję stronę na zasobach, które należą do Ciebie. Masz 100% kontroli i pełną niezależność.",
+                "Mam ponad 7 lat doświadczenia w pracy z technologiami, których używam do tworzenia stron takich jak ta, którą właśnie widzisz. Wiem, co robię i wiem, że można osiągnąć właściwie każdy efekt, który chcemy."
             ],
             technologies: "Technologie, z Którymi Pracuję",
         },
@@ -107,12 +104,9 @@ export const translations = {
             title: "Why Choose Me?",
             subtitle: "Combining technical expertise with creative vision to deliver exceptional results",
             skills: [
-                "Modern Frontend Frameworks",
-                "Backend Development",
-                "Database Design",
-                "Cloud Deployment",
-                "UI/UX Design",
-                "Performance Optimization",
+                "I don't take any upfront payments — you only pay when you're fully satisfied with the result.",
+                "I always install the website on resources that belong to you. You have 100% control and complete independence.",
+                "I have over 7 years of experience working with the technologies I use to build websites like the one you're looking at. I know what I'm doing, and I know we can achieve virtually any result we want."
             ],
             technologies: "Technologies I Work With",
         },

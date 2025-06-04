@@ -42,12 +42,26 @@ export function AboutSection({ translations }: AboutSectionProps) {
                         transition={{ duration: 0.8 }}
                         viewport={{ once: true }}
                     >
-                        <div className="grid grid-cols-2 gap-4 mb-8">
+                        <div className="space-y-6 mb-8">
                             {translations.skills.map((skill, index) => (
-                                <div key={index} className="flex items-center space-x-2">
-                                    <Check className="w-5 h-5 text-[hsl(188.74deg_94.5%_42.75%)]" />
-                                    <span className="text-gray-700">{skill}</span>
-                                </div>
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                                    viewport={{ once: true }}
+                                    className="flex items-start space-x-3"
+                                >
+                                    <div className="flex-shrink-0 mt-1">
+                                        <div className="relative">
+                                            <div className="w-6 h-6 bg-gradient-to-r from-[hsl(188.74deg_94.5%_42.75%)] to-blue-500 rounded-full flex items-center justify-center">
+                                                <Check className="w-3.5 h-3.5 text-white" />
+                                            </div>
+                                            <div className="absolute inset-0 bg-gradient-to-r from-[hsl(188.74deg_94.5%_42.75%)] to-blue-500 rounded-full blur-sm opacity-30 animate-pulse"></div>
+                                        </div>
+                                    </div>
+                                    <p className="text-gray-700 leading-relaxed">{skill}</p>
+                                </motion.div>
                             ))}
                         </div>
 
@@ -55,12 +69,19 @@ export function AboutSection({ translations }: AboutSectionProps) {
 
                         <div className="grid grid-cols-4 gap-4">
                             {techStack.map((tech, index) => (
-                                <div key={index} className="text-center">
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, scale: 0.8 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                                    viewport={{ once: true }}
+                                    className="text-center"
+                                >
                                     <div className="w-12 h-12 bg-[hsl(188.74deg_94.5%_42.75%)]/10 rounded-lg flex items-center justify-center mb-2 mx-auto hover:bg-[hsl(188.74deg_94.5%_42.75%)]/20 transition-colors">
                                         <tech.icon className="w-6 h-6 text-[hsl(188.74deg_94.5%_42.75%)]" />
                                     </div>
                                     <span className="text-sm text-gray-600">{tech.name}</span>
-                                </div>
+                                </motion.div>
                             ))}
                         </div>
                     </motion.div>
