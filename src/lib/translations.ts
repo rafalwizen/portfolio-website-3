@@ -35,7 +35,7 @@ export const translations = {
         },
         about: {
             title: "Dlaczego Warto Mnie Wybrać?",
-            subtitle: "Łączę wiedzę techniczną z kreatywną wizją, aby dostarczać wyjątkowe rezultaty",
+            subtitle: "Dla mnie liczy się efekt, który spełnia Twoje oczekiwania i działa bez zarzutu",
             skills: [
                 "Nie pobieram żadnych zaliczek — stronę opłacasz dopiero wtedy, gdy jesteś w pełni zadowolony z efektu.",
                 "Zawsze instaluję stronę na zasobach, które należą do Ciebie. Masz 100% kontroli i pełną niezależność.",
@@ -45,13 +45,14 @@ export const translations = {
         },
         portfolio: {
             title: "Wybrane Projekty",
-            subtitle: "Najnowsze prace, które pokazują moje umiejętności i dbałość o szczegóły",
+            subtitle: "Przykłady stron stworzonych z myślą o konkretnych potrzebach klientów",
             viewLive: "Zobacz Na Żywo",
             viewCode: "Zobacz Kod",
         },
         contact: {
-            title: "Współpracujmy Razem",
-            subtitle: "Gotowy, aby tchnąć życie w swój projekt? Skontaktuj się ze mną i omówmy Twoje potrzeby.",
+            title: "Gotowy, aby ruszyć z projektem?",
+            subtitle: "Chętnie pomogę ożywić Twój pomysł — napisz do mnie!",
+            location: "Lokalizacja",
             form: {
                 name: "Imię i Nazwisko",
                 email: "Adres Email",
@@ -102,7 +103,7 @@ export const translations = {
         },
         about: {
             title: "Why Choose Me?",
-            subtitle: "Combining technical expertise with creative vision to deliver exceptional results",
+            subtitle: "What matters to me is delivering a result that meets your expectations and works flawlessly",
             skills: [
                 "I don't take any upfront payments — you only pay when you're fully satisfied with the result.",
                 "I always install the website on resources that belong to you. You have 100% control and complete independence.",
@@ -112,13 +113,14 @@ export const translations = {
         },
         portfolio: {
             title: "Featured Projects",
-            subtitle: "Recent work that showcases my capabilities and attention to detail",
+            subtitle: "Examples of websites created with the specific needs of each client in mind",
             viewLive: "View Live",
             viewCode: "View Code",
         },
         contact: {
-            title: "Let's Work Together",
-            subtitle: "Ready to bring your project to life? Get in touch and let's discuss your needs.",
+            title: "Ready to get your project started?",
+            subtitle: "I’m happy to help bring your idea to life — write to me!",
+            location: "Location",
             form: {
                 name: "Full Name",
                 email: "Email Address",

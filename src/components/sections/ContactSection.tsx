@@ -17,6 +17,7 @@ interface ContactSectionProps {
     translations: {
         title: string
         subtitle: string
+        location: string
         form: {
             name: string
             email: string
@@ -149,21 +150,21 @@ export function ContactSection({ translations }: ContactSectionProps) {
                                     <div className="text-gray-600">{translations.info.email}</div>
                                 </div>
                             </div>
-                            <div className="flex items-center space-x-4 mb-6">
-                                <div className="w-12 h-12 bg-[hsl(188.74deg_94.5%_42.75%)]/10 rounded-lg flex items-center justify-center">
-                                    <Phone className="w-6 h-6 text-[hsl(188.74deg_94.5%_42.75%)]" />
-                                </div>
-                                <div>
-                                    <div className="font-semibold text-gray-900">Phone</div>
-                                    <div className="text-gray-600">{translations.info.phone}</div>
-                                </div>
-                            </div>
+                            {/*<div className="flex items-center space-x-4 mb-6">*/}
+                            {/*    <div className="w-12 h-12 bg-[hsl(188.74deg_94.5%_42.75%)]/10 rounded-lg flex items-center justify-center">*/}
+                            {/*        <Phone className="w-6 h-6 text-[hsl(188.74deg_94.5%_42.75%)]" />*/}
+                            {/*    </div>*/}
+                            {/*    <div>*/}
+                            {/*        <div className="font-semibold text-gray-900">Phone</div>*/}
+                            {/*        <div className="text-gray-600">{translations.info.phone}</div>*/}
+                            {/*    </div>*/}
+                            {/*</div>*/}
                             <div className="flex items-center space-x-4 mb-8">
                                 <div className="w-12 h-12 bg-[hsl(188.74deg_94.5%_42.75%)]/10 rounded-lg flex items-center justify-center">
                                     <MapPin className="w-6 h-6 text-[hsl(188.74deg_94.5%_42.75%)]" />
                                 </div>
                                 <div>
-                                    <div className="font-semibold text-gray-900">Location</div>
+                                    <div className="font-semibold text-gray-900">{translations.location}</div>
                                     <div className="text-gray-600">{translations.info.location}</div>
                                 </div>
                             </div>
