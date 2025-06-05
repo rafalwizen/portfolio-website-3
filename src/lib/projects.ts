@@ -14,8 +14,11 @@ export const projects = [
             "/placeholder.svg?height=300&width=500&text=E-Commerce+2",
             "/placeholder.svg?height=300&width=500&text=E-Commerce+3",
         ],
-        liveUrl: "https://torty-artystyczne.vercel.app/",
-        codeUrl: "https://github.com",
+        liveUrl: "https://torty-artystyczne.vercel.app",
+        codeUrl: {
+            pl: "https://github.com/rafalwizen/sweet-creations-next-js/blob/master/README.pl.md",
+            en: "https://github.com/rafalwizen/sweet-creations-next-js/blob/master/README.md"
+        }
     },
     {
         title: {
@@ -32,8 +35,11 @@ export const projects = [
             "/placeholder.svg?height=300&width=500&text=SaaS+Dashboard+2",
             "/placeholder.svg?height=300&width=500&text=SaaS+Dashboard+3",
         ],
-        liveUrl: "https://example.com",
-        codeUrl: "https://github.com",
+        liveUrl: "https://rozbickipawel.pl",
+        codeUrl: {
+            pl: "https://github.com/rafalwizen/photographer-website-next-js-2",
+            en: "https://github.com/rafalwizen/photographer-website-next-js-2"
+        }
     },
     {
         title: {
@@ -50,7 +56,10 @@ export const projects = [
             "/placeholder.svg?height=300&width=500&text=Mobile+App+2",
             "/placeholder.svg?height=300&width=500&text=Mobile+App+3",
         ],
-        liveUrl: "https://example.com",
-        codeUrl: "https://github.com",
+        liveUrl: "-",
+        codeUrl: {
+            pl: "https://github.com/rafalwizen/restaurant-coupons-server",
+            en: "https://github.com/rafalwizen/restaurant-coupons-server"
+        }
     },
 ]
