@@ -1,8 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Check, Database, Smartphone, Cloud } from "lucide-react"
-import { FaReact } from "react-icons/fa"
+import { Check } from "lucide-react"
 import Image from "next/image"
 
 interface AboutSectionProps {
@@ -15,12 +14,6 @@ interface AboutSectionProps {
 }
 
 export function AboutSection({ translations }: AboutSectionProps) {
-    const techStack = [
-        { icon: FaReact, name: "React", animation: "spin" },
-        { icon: Database, name: "Node.js", animation: "bounce" },
-        { icon: Smartphone, name: "Mobile", animation: "none" },
-        { icon: Cloud, name: "AWS", animation: "none" },
-    ]
 
     return (
         <section id="about" className="py-20">
@@ -62,54 +55,6 @@ export function AboutSection({ translations }: AboutSectionProps) {
                                         </div>
                                     </div>
                                     <p className="text-gray-700 leading-relaxed">{skill}</p>
-                                </motion.div>
-                            ))}
-                        </div>
-
-                        <h3 className="text-xl font-semibold text-gray-900 mb-4">{translations.technologies}</h3>
-
-                        <div className="grid grid-cols-4 gap-4">
-                            {techStack.map((tech, index) => (
-                                <motion.div
-                                    key={index}
-                                    initial={{ opacity: 0, scale: 0.8 }}
-                                    whileInView={{ opacity: 1, scale: 1 }}
-                                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                                    viewport={{ once: true }}
-                                    className="text-center"
-                                >
-                                    <div className="w-12 h-12 bg-[hsl(188.74deg_94.5%_42.75%)]/10 rounded-lg flex items-center justify-center mb-2 mx-auto hover:bg-[hsl(188.74deg_94.5%_42.75%)]/20 transition-colors">
-                                        {tech.animation === "spin" ? (
-                                            <motion.div
-                                                animate={{ rotate: 360 }}
-                                                transition={{
-                                                    duration: 3,
-                                                    repeat: Number.POSITIVE_INFINITY,
-                                                    ease: "linear",
-                                                }}
-                                            >
-                                                <tech.icon className="w-6 h-6 text-[hsl(188.74deg_94.5%_42.75%)]" />
-                                            </motion.div>
-                                        ) : tech.animation === "bounce" ? (
-                                            <motion.div
-                                                animate={{
-                                                    y: [0, -10, 0, -5, 0, -2, 0],
-                                                }}
-                                                transition={{
-                                                    duration: 1.5,
-                                                    repeat: Number.POSITIVE_INFINITY,
-                                                    repeatDelay: 1.5,
-                                                    ease: "easeOut",
-                                                    times: [0, 0.2, 0.4, 0.6, 0.8, 0.9, 1],
-                                                }}
-                                            >
-                                                <tech.icon className="w-6 h-6 text-[hsl(188.74deg_94.5%_42.75%)]" />
-                                            </motion.div>
-                                        ) : (
-                                            <tech.icon className="w-6 h-6 text-[hsl(188.74deg_94.5%_42.75%)]" />
-                                        )}
-                                    </div>
-                                    <span className="text-sm text-gray-600">{tech.name}</span>
                                 </motion.div>
                             ))}
                         </div>
