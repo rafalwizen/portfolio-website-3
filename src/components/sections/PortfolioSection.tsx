@@ -4,8 +4,7 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ExternalLink, Github, ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import { Card, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card"
 import Image from "next/image"
 import { projects } from "@/lib/projects"
 
@@ -181,20 +180,6 @@ export function PortfolioSection({ translations, language }: PortfolioSectionPro
                                     <CardTitle>{project.title}</CardTitle>
                                     <CardDescription>{project.description[language]}</CardDescription>
                                 </CardHeader>
-
-                                <CardContent>
-                                    <div className="flex flex-wrap gap-2 mb-4">
-                                        {project.technologies.map((tech, techIndex) => (
-                                            <Badge
-                                                key={techIndex}
-                                                variant="secondary"
-                                                className="bg-[hsl(188.74deg_94.5%_42.75%)]/10 text-[hsl(188.74deg_94.5%_42.75%)] hover:bg-[hsl(188.74deg_94.5%_42.75%)] hover:text-white"
-                                            >
-                                                {tech}
-                                            </Badge>
-                                        ))}
-                                    </div>
-                                </CardContent>
 
                                 <CardFooter className="flex gap-3">
                                     <Button
