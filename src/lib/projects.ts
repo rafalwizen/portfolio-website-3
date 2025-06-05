@@ -1,9 +1,12 @@
 export const projects = [
     {
-        title: "E-Commerce Platform",
+        title: {
+            pl: "Torty artystyczne",
+            en: "Sweet creations",
+        },
         description: {
-            pl: "Nowoczesne rozwiązanie e-commerce z zaawansowanym filtrowaniem, integracją płatności i panelem administracyjnym.",
-            en: "Modern e-commerce solution with advanced filtering, payment integration, and admin dashboard.",
+            pl: "To wyjątkowa strona, którą zaprojektowałem z myślą o pasji mojej żony do artystycznych tortów. Intuicyjna galeria i prosta sekcja kontaktowa pozwalają dzielić się jej cukierniczym talentem i ułatwiają dotarcie do nowych klientów",
+            en: "This is a unique website I designed with my wife's passion for artistic cakes in mind. An intuitive gallery and a simple contact section make it easy to showcase her baking talent and reach new clients",
         },
         image: "/placeholder.svg?height=300&width=500",
         images: [
@@ -11,14 +14,17 @@ export const projects = [
             "/placeholder.svg?height=300&width=500&text=E-Commerce+2",
             "/placeholder.svg?height=300&width=500&text=E-Commerce+3",
         ],
-        liveUrl: "https://example.com",
+        liveUrl: "https://torty-artystyczne.vercel.app/",
         codeUrl: "https://github.com",
     },
     {
-        title: "SaaS Dashboard",
+        title: {
+            pl: "Portfolio fotograficzne",
+            en: "Photography portfolio",
+        },
         description: {
-            pl: "Kompleksowy panel analityczny z wizualizacją danych w czasie rzeczywistym i zarządzaniem użytkownikami.",
-            en: "Comprehensive analytics dashboard with real-time data visualization and user management.",
+            pl: "Strona internetowa stworzona z myślą o prezentacji fotograficznego portfolio mojego szwagra. Zawiera oryginalnie zaprojektowaną galerię, osobistą sekcję oraz formularz kontaktowy – razem tworzą spójną i nowoczesną wizytówkę online",
+            en: "A website created to showcase my brother-in-law’s photography portfolio. It features a uniquely designed gallery, a personal section, and a contact form – together forming a cohesive and modern online showcase",
         },
         image: "/placeholder.svg?height=300&width=500",
         images: [
@@ -30,10 +36,13 @@ export const projects = [
         codeUrl: "https://github.com",
     },
     {
-        title: "Mobile App Landing",
+        title: {
+            pl: "Kupony restauracyjne",
+            en: "Restaurant coupons",
+        },
         description: {
-            pl: "Responsywna strona docelowa dla aplikacji mobilnej z płynnymi animacjami i optymalizacją konwersji.",
-            en: "Responsive landing page for mobile app with smooth animations and conversion optimization.",
+            pl: "To coś znacznie więcej niż zwykła strona internetowa – to kompleksowa aplikacja do zarządzania kuponami restauracyjnymi, łącząca elegancką wersję webową z wygodną aplikacją mobilną. Projekt jest w trakcie tworzenia i jeszcze nie jest dostępny dla użytkowników, ale prezentuję go tutaj jako przykład aby pokazać, że ogranicza nas właściwie tylko wyobraźnia.",
+            en: "This is much more than a regular website – it’s a comprehensive application for managing restaurant coupons, combining an elegant web version with a convenient mobile app. The project is currently under development and not yet available to users, but I’m showcasing it here as an example of blending aesthetics and functionality at the highest level – the only limit is our imagination",
         },
         image: "/placeholder.svg?height=300&width=500",
         images: [

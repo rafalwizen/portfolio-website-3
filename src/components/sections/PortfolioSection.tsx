@@ -99,7 +99,7 @@ export function PortfolioSection({ translations, language }: PortfolioSectionPro
                             transition={{ duration: 0.8, delay: index * 0.2 }}
                             viewport={{ once: true }}
                         >
-                            <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+                            <Card className="overflow-hidden hover:shadow-lg transition-shadow h-full flex flex-col">
                                 <div className="relative h-48 overflow-hidden">
                                     {/* Image carousel with smooth transitions */}
                                     <div className="relative w-full h-full">
@@ -119,7 +119,7 @@ export function PortfolioSection({ translations, language }: PortfolioSectionPro
                                             >
                                                 <Image
                                                     src={getCurrentImage(index) || "/placeholder.svg"}
-                                                    alt={`${project.title} - Image ${(currentImageIndex[index] || 0) + 1}`}
+                                                    alt={`${project.title[language]} - Image ${(currentImageIndex[index] || 0) + 1}`}
                                                     width={500}
                                                     height={300}
                                                     className="w-full h-full object-cover"
@@ -176,8 +176,8 @@ export function PortfolioSection({ translations, language }: PortfolioSectionPro
                                     </div>
                                 </div>
 
-                                <CardHeader>
-                                    <CardTitle>{project.title}</CardTitle>
+                                <CardHeader className="flex-1">
+                                    <CardTitle>{project.title[language]}</CardTitle>
                                     <CardDescription>{project.description[language]}</CardDescription>
                                 </CardHeader>
 
