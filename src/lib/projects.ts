@@ -10,8 +10,8 @@ export const projects = [
         },
         image: "/placeholder.svg?height=300&width=500",
         images: [
-            "/placeholder.svg?height=300&width=500&text=E-Commerce+1",
-            "/placeholder.svg?height=300&width=500&text=E-Commerce+2",
+            "/images/screenshot7.jpg?height=300&width=500&text=E-Commerce+1",
+            "/images/screenshot8.jpg?height=300&width=500&text=E-Commerce+2",
             "/placeholder.svg?height=300&width=500&text=E-Commerce+3",
         ],
         liveUrl: "https://torty-artystyczne.vercel.app",
