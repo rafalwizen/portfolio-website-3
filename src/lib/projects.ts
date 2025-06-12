@@ -10,9 +10,8 @@ export const projects = [
         },
         image: "/placeholder.svg?height=300&width=500",
         images: [
-            "/images/screenshot7.jpg?height=300&width=500&text=E-Commerce+1",
-            "/images/screenshot8.jpg?height=300&width=500&text=E-Commerce+2",
-            "/placeholder.svg?height=300&width=500&text=E-Commerce+3",
+            "/images/screenshot7.jpg?height=300&width=500",
+            "/images/screenshot8.jpg?height=300&width=500",
         ],
         liveUrl: "https://torty-artystyczne.vercel.app",
         codeUrl: {
@@ -31,9 +30,9 @@ export const projects = [
         },
         image: "/placeholder.svg?height=300&width=500",
         images: [
-            "/placeholder.svg?height=300&width=500&text=SaaS+Dashboard+1",
-            "/placeholder.svg?height=300&width=500&text=SaaS+Dashboard+2",
-            "/placeholder.svg?height=300&width=500&text=SaaS+Dashboard+3",
+            "/images/screenshot1.jpg?height=300&width=500",
+            "/images/screenshot2.jpg?height=300&width=500",
+            "/images/screenshot3.jpg?height=300&width=500",
         ],
         liveUrl: "https://rozbickipawel.pl",
         codeUrl: {
