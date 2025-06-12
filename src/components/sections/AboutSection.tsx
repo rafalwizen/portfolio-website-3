@@ -68,7 +68,7 @@ export function AboutSection({ translations }: AboutSectionProps) {
                         className="relative"
                     >
                         <Image
-                            src="/placeholder.svg?height=500&width=500"
+                            src="/images/workspace.webp?height=500&width=500"
                             alt="Developer workspace"
                             width={500}
                             height={500}
