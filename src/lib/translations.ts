@@ -64,6 +64,8 @@ export const translations = {
                 email: "rafal.wizen@gmail.com",
                 phone: "+48 726 593 099",
                 location: "Tarnowskie Góry, Polska",
+                locationLabel: "Lokalizacja",
+                phoneLabel: "Telefon",
             },
             messages: {
                 success: {
@@ -142,6 +144,8 @@ export const translations = {
                 email: "rafal.wizen@gmail.com",
                 phone: "+48 726 593 099",
                 location: "Tarnowskie Góry, Poland",
+                locationLabel: "Location",
+                phoneLabel: "Phone",
             },
             messages: {
                 success: {
