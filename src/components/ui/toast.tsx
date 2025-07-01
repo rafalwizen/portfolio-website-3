@@ -24,8 +24,11 @@ const Toast = React.forwardRef<
     HTMLLIElement,
     React.HTMLAttributes<HTMLLIElement> & {
     variant?: "default" | "destructive"
+    onOpenChange?: (open: boolean) => void
 }
->(({ className, variant = "default", ...props }, ref) => {
+>(({ className, variant = "default", onOpenChange, ...props }, ref) => {
+    const { ...liProps } = props
+
     return (
         <li
             ref={ref}
@@ -35,7 +38,7 @@ const Toast = React.forwardRef<
                 variant === "destructive" && "destructive border-destructive bg-destructive text-destructive-foreground",
                 className,
             )}
-            {...props}
+            {...liProps}
         />
     )
 })
