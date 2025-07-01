@@ -1,8 +1,7 @@
 "use client"
 
 import type React from "react"
-
-import { useState } from "react"
+import { useState, type FormEvent } from "react"
 import { motion } from "framer-motion"
 import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -17,7 +16,6 @@ interface ContactSectionProps {
     translations: {
         title: string
         subtitle: string
-        location: string
         form: {
             name: string
             email: string
@@ -29,39 +27,83 @@ interface ContactSectionProps {
             email: string
             phone: string
             location: string
+            emailLabel?: string
+            phoneLabel?: string
+            locationLabel?: string
+        }
+        messages: {
+            success: {
+                title: string
+                description: string
+            }
+            error: {
+                title: string
+                description: string
+            }
         }
     }
 }
 
 export function ContactSection({ translations }: ContactSectionProps) {
     const [isSubmitting, setIsSubmitting] = useState(false)
+    const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(null)
+    const [formData, setFormData] = useState({
+        domain: "Portfolio Rafał",
+        name: "",
+        email: "",
+        message: "",
+    })
     const { toast } = useToast()
 
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target
+        setFormData((prev) => ({
+            ...prev,
+            [name]: value,
+        }))
+    }
+
+    const handleSubmit = (e: FormEvent) => {
         e.preventDefault()
         setIsSubmitting(true)
+        setSubmitStatus(null)
 
-        const form = e.currentTarget
+        const form = e.target as HTMLFormElement
+        const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string
+        const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string
+        const userID = process.env.NEXT_PUBLIC_EMAILJS_USER_ID as string
 
-        try {
-            // Replace with your EmailJS service ID, template ID, and public key
-            await emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form, "YOUR_PUBLIC_KEY")
-
-            toast({
-                title: "Message sent successfully!",
-                description: "Thank you for your message. I'll get back to you soon.",
+        emailjs
+            .sendForm(serviceID, templateID, form, userID)
+            .then(
+                () => {
+                    console.log("Wiadomość wysłana pomyślnie")
+                    setSubmitStatus("success")
+                    toast({
+                        title: translations.messages.success.title,
+                        description: translations.messages.success.description,
+                    })
+                    setFormData({
+                        domain: "Portfolio Rafał",
+                        name: "",
+                        email: "",
+                        message: "",
+                    })
+                },
+                (error) => {
+                    console.log("Błąd podczas wysyłania wiadomości")
+                    console.log(error)
+                    setSubmitStatus("error")
+                    toast({
+                        title: translations.messages.error.title,
+                        description: translations.messages.error.description,
+                        variant: "destructive",
+                    })
+                },
+            )
+            .finally(() => {
+                setIsSubmitting(false)
             })
-
-            form.reset()
-        } catch (error) {
-            toast({
-                title: "Error sending message",
-                description: "Please try again or contact me directly.",
-                variant: "destructive",
-            })
-        } finally {
-            setIsSubmitting(false)
-        }
     }
 
     return (
@@ -87,6 +129,7 @@ export function ContactSection({ translations }: ContactSectionProps) {
                     >
                         <Card className="p-6 shadow-lg border-t-4 border-t-[hsl(188.74deg_94.5%_42.75%)]">
                             <form onSubmit={handleSubmit} className="space-y-6">
+                                <input type="hidden" name="domain" value={formData.domain} />
                                 <div>
                                     <Label htmlFor="name" className="text-gray-900">
                                         {translations.form.name}
@@ -94,6 +137,8 @@ export function ContactSection({ translations }: ContactSectionProps) {
                                     <Input
                                         id="name"
                                         name="name"
+                                        value={formData.name}
+                                        onChange={handleInputChange}
                                         required
                                         className="mt-1 border-gray-300 focus:border-[hsl(188.74deg_94.5%_42.75%)] focus:ring-[hsl(188.74deg_94.5%_42.75%)]"
                                     />
@@ -106,6 +151,8 @@ export function ContactSection({ translations }: ContactSectionProps) {
                                         id="email"
                                         name="email"
                                         type="email"
+                                        value={formData.email}
+                                        onChange={handleInputChange}
                                         required
                                         className="mt-1 border-gray-300 focus:border-[hsl(188.74deg_94.5%_42.75%)] focus:ring-[hsl(188.74deg_94.5%_42.75%)]"
                                     />
@@ -118,6 +165,8 @@ export function ContactSection({ translations }: ContactSectionProps) {
                                         id="message"
                                         name="message"
                                         rows={5}
+                                        value={formData.message}
+                                        onChange={handleInputChange}
                                         required
                                         className="mt-1 border-gray-300 focus:border-[hsl(188.74deg_94.5%_42.75%)] focus:ring-[hsl(188.74deg_94.5%_42.75%)]"
                                     />
@@ -125,7 +174,7 @@ export function ContactSection({ translations }: ContactSectionProps) {
                                 <Button
                                     type="submit"
                                     disabled={isSubmitting}
-                                    className="w-full bg-[hsl(188.74deg_94.5%_42.75%)] text-white hover:bg-[hsl(188.74deg_94.5%_35%)]"
+                                    className="w-full bg-[hsl(188.74deg_94.5%_42.75%)] text-white hover:bg-[hsl(188.74deg_94.5%_35%)] disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
                                     {isSubmitting ? translations.form.sending : translations.form.send}
                                 </Button>
@@ -146,25 +195,25 @@ export function ContactSection({ translations }: ContactSectionProps) {
                                     <Mail className="w-6 h-6 text-[hsl(188.74deg_94.5%_42.75%)]" />
                                 </div>
                                 <div>
-                                    <div className="font-semibold text-gray-900">Email</div>
+                                    <div className="font-semibold text-gray-900">{translations.info.emailLabel || "Email"}</div>
                                     <div className="text-gray-600">{translations.info.email}</div>
                                 </div>
                             </div>
-                            {/*<div className="flex items-center space-x-4 mb-6">*/}
-                            {/*    <div className="w-12 h-12 bg-[hsl(188.74deg_94.5%_42.75%)]/10 rounded-lg flex items-center justify-center">*/}
-                            {/*        <Phone className="w-6 h-6 text-[hsl(188.74deg_94.5%_42.75%)]" />*/}
-                            {/*    </div>*/}
-                            {/*    <div>*/}
-                            {/*        <div className="font-semibold text-gray-900">Phone</div>*/}
-                            {/*        <div className="text-gray-600">{translations.info.phone}</div>*/}
-                            {/*    </div>*/}
-                            {/*</div>*/}
+                            <div className="flex items-center space-x-4 mb-6">
+                                <div className="w-12 h-12 bg-[hsl(188.74deg_94.5%_42.75%)]/10 rounded-lg flex items-center justify-center">
+                                    <Phone className="w-6 h-6 text-[hsl(188.74deg_94.5%_42.75%)]" />
+                                </div>
+                                <div>
+                                    <div className="font-semibold text-gray-900">{translations.info.phoneLabel || "Phone"}</div>
+                                    <div className="text-gray-600">{translations.info.phone}</div>
+                                </div>
+                            </div>
                             <div className="flex items-center space-x-4 mb-8">
                                 <div className="w-12 h-12 bg-[hsl(188.74deg_94.5%_42.75%)]/10 rounded-lg flex items-center justify-center">
                                     <MapPin className="w-6 h-6 text-[hsl(188.74deg_94.5%_42.75%)]" />
                                 </div>
                                 <div>
-                                    <div className="font-semibold text-gray-900">{translations.location}</div>
+                                    <div className="font-semibold text-gray-900">{translations.info.locationLabel || "Location"}</div>
                                     <div className="text-gray-600">{translations.info.location}</div>
                                 </div>
                             </div>

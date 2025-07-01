@@ -65,6 +65,16 @@ export const translations = {
                 phone: "+48 726 593 099",
                 location: "Tarnowskie Góry, Polska",
             },
+            messages: {
+                success: {
+                    title: "Wiadomość wysłana pomyślnie!",
+                    description: "Dziękuję za wiadomość. Odpowiem najszybciej jak to możliwe.",
+                },
+                error: {
+                    title: "Błąd podczas wysyłania wiadomości",
+                    description: "Spróbuj ponownie lub skontaktuj się ze mną bezpośrednio.",
+                },
+            },
         },
     },
     en: {
@@ -132,6 +142,16 @@ export const translations = {
                 email: "rafal.wizen@gmail.com",
                 phone: "+48 726 593 099",
                 location: "Tarnowskie Góry, Poland",
+            },
+            messages: {
+                success: {
+                    title: "Message sent successfully!",
+                    description: "Thank you for your message. I'll get back to you soon.",
+                },
+                error: {
+                    title: "Error sending message",
+                    description: "Please try again or contact me directly.",
+                },
             },
         },
     },
