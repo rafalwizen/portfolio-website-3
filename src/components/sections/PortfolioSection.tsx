@@ -193,15 +193,15 @@ export function PortfolioSection({ translations, language }: PortfolioSectionPro
                                             {translations.viewLive}
                                         </Button>
                                     )}
-                                    <Button
-                                        size="sm"
-                                        variant="outline"
-                                        className="border-[hsl(188.74deg_94.5%_42.75%)] text-[hsl(188.74deg_94.5%_42.75%)] hover:bg-[hsl(188.74deg_94.5%_42.75%)] hover:text-white"
-                                        onClick={() => window.open(project.codeUrl[language], "_blank")}
-                                    >
-                                        <Github className="w-4 h-4 mr-2" />
-                                        {translations.viewCode}
-                                    </Button>
+                                    {/*<Button*/}
+                                    {/*    size="sm"*/}
+                                    {/*    variant="outline"*/}
+                                    {/*    className="border-[hsl(188.74deg_94.5%_42.75%)] text-[hsl(188.74deg_94.5%_42.75%)] hover:bg-[hsl(188.74deg_94.5%_42.75%)] hover:text-white"*/}
+                                    {/*    onClick={() => window.open(project.codeUrl[language], "_blank")}*/}
+                                    {/*>*/}
+                                    {/*    <Github className="w-4 h-4 mr-2" />*/}
+                                    {/*    {translations.viewCode}*/}
+                                    {/*</Button>*/}
                                 </CardFooter>
                             </Card>
                         </motion.div>
