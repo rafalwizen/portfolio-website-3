@@ -10,8 +10,8 @@ export const projects = [
         },
         image: "/placeholder.svg?height=300&width=500",
         images: [
-            "/images/screenshot7.jpg?height=300&width=500",
-            "/images/screenshot8.jpg?height=300&width=500",
+            "/images/screenshot7.jpg?height=300&width=500&text=torty-artystyczne-1",
+            "/images/screenshot8.jpg?height=300&width=500&text=torty-artystyczne-2",
         ],
         liveUrl: "https://torty-artystyczne.vercel.app",
         codeUrl: {
@@ -30,9 +30,9 @@ export const projects = [
         },
         image: "/placeholder.svg?height=300&width=500",
         images: [
-            "/images/screenshot1.jpg?height=300&width=500",
-            "/images/screenshot2.jpg?height=300&width=500",
-            "/images/screenshot3.jpg?height=300&width=500",
+            "/images/screenshot1.jpg?height=300&width=500&text=photographer-website-1",
+            "/images/screenshot2.jpg?height=300&width=500&text=photographer-website-2",
+            "/images/screenshot3.jpg?height=300&width=500&text=photographer-website-3",
         ],
         liveUrl: "https://rozbickipawel.pl",
         codeUrl: {
@@ -46,16 +46,16 @@ export const projects = [
             en: "Restaurant coupons",
         },
         description: {
-            pl: "To coś znacznie więcej niż zwykła strona internetowa – to kompleksowa aplikacja do zarządzania kuponami restauracyjnymi, łącząca elegancką wersję webową z wygodną aplikacją mobilną. Projekt jest w trakcie tworzenia i jeszcze nie jest dostępny dla użytkowników, ale prezentuję go tutaj jako przykład aby pokazać, że ogranicza nas właściwie tylko wyobraźnia.",
-            en: "This is much more than a regular website – it’s a comprehensive application for managing restaurant coupons, combining an elegant web version with a convenient mobile app. The project is currently under development and not yet available to users, but I’m showcasing it here as an example of blending aesthetics and functionality at the highest level – the only limit is our imagination",
+            pl: "Responsywna i estetyczna strona internetowa dla lokalnej pizzerii. Zawiera menu z apetycznymi zdjęciami oraz mapę dojazdu. Projekt zoptymalizowany pod kątem urządzeń mobilnych i SEO",
+            en: "A responsive and visually appealing website for a local pizzeria. It features a menu with appetizing photos and a location map. The project is optimized for mobile devices and SEO",
         },
         image: "/placeholder.svg?height=300&width=500",
         images: [
-            "/placeholder.svg?height=300&width=500&text=Mobile+App+1",
-            "/placeholder.svg?height=300&width=500&text=Mobile+App+2",
-            "/placeholder.svg?height=300&width=500&text=Mobile+App+3",
+            "/images/screenshot4.jpg?height=300&width=500&text=Slice-pizza-website-photo-1",
+            "/images/screenshot5.jpg?height=300&width=500&text=Slice-pizza-website-photo-2",
+            "/images/screenshot6.jpg?height=300&width=500&text=Slice-pizza-website-photo-3",
         ],
-        liveUrl: "-",
+        liveUrl: "https://slice-pizza-tg.vercel.app/",
         codeUrl: {
             pl: "https://github.com/rafalwizen/restaurant-coupons-server",
             en: "https://github.com/rafalwizen/restaurant-coupons-server"
