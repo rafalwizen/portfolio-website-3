@@ -42,12 +42,12 @@ export const projects = [
     },
     {
         title: {
-            pl: "Kupony restauracyjne",
-            en: "Restaurant coupons",
+            pl: "Strona pizzerii",
+            en: "Restaurant website",
         },
         description: {
-            pl: "Responsywna i estetyczna strona internetowa dla lokalnej pizzerii. Zawiera menu z apetycznymi zdjęciami oraz mapę dojazdu. Projekt zoptymalizowany pod kątem urządzeń mobilnych i SEO",
-            en: "A responsive and visually appealing website for a local pizzeria. It features a menu with appetizing photos and a location map. The project is optimized for mobile devices and SEO",
+            pl: "Strona zrobiona dla klienta z Tarnowskich Gór. Responsywna i estetyczna strona internetowa dla lokalnej pizzerii. Zawiera menu oraz mapę dojazdu. Projekt zoptymalizowany pod kątem urządzeń mobilnych i SEO",
+            en: "A website created for a client from Tarnowskie Góry, responsive and visually appealing website for a local pizzeria. It features a menu and a location map. The project is optimized for mobile devices and SEO",
         },
         image: "/placeholder.svg?height=300&width=500",
         images: [
@@ -55,7 +55,7 @@ export const projects = [
             "/images/screenshot5.jpg?height=300&width=500&text=Slice-pizza-website-photo-2",
             "/images/screenshot6.jpg?height=300&width=500&text=Slice-pizza-website-photo-3",
         ],
-        liveUrl: "https://slice-pizza-tg.vercel.app/",
+        liveUrl: "https://slicepizzatg.pl/",
         codeUrl: {
             pl: "https://github.com/rafalwizen/restaurant-coupons-server",
             en: "https://github.com/rafalwizen/restaurant-coupons-server"
