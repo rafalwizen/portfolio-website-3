@@ -36,7 +36,7 @@ export const metadata: Metadata = {
         description:
             "Tworzę strony wizytówki i portfolio, które pomagają Ci wyróżnić się w sieci.",
         creator: "@rafal_wizen",
-        images: ["https://rafal-wizen.vercel.app/og-image.jpg"],
+        images: ["https://rafal-wizen.vercel.app/og-image.webp"],
     },
     robots: {
         index: true,
