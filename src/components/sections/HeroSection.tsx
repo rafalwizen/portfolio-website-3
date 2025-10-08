@@ -202,7 +202,7 @@ export function HeroSection({ translations }: HeroSectionProps) {
                             <div className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-[hsl(188.74deg_94.5%_42.75%)] shadow-2xl">
                                 <Image
                                     src="/images/me_myself_and_I.webp?height=400&width=400"
-                                    alt="Rafał Wiżeń - Full-Stack Developer"
+                                    alt="Rafał Wiżeń - to ja!"
                                     width={400}
                                     height={400}
                                     className="w-full h-full object-cover"
