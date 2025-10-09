@@ -178,6 +178,19 @@ export function ContactSection({ translations }: ContactSectionProps) {
                                 >
                                     {isSubmitting ? translations.form.sending : translations.form.send}
                                 </Button>
+
+                                {submitStatus === 'success' && (
+                                    <div className="mb-6 p-4 bg-[hsl(188.74deg_94.5%_42.75%_/0.4)] rounded-md">
+                                        <div className="font-semibold text-gray-900">{translations.messages.success.title}</div>
+                                        <div className="text-gray-600">{translations.messages.success.description}</div>
+                                    </div>
+                                )}
+                                {submitStatus === 'error' && (
+                                    <div className="mb-6 p-4 bg-[hsl(188.74deg_94.5%_42.75%_/0.4)] rounded-md">
+                                        <div className="font-semibold text-gray-900">{translations.messages.error.title}</div>
+                                        <div className="text-gray-600">{translations.messages.error.description}</div>
+                                    </div>
+                                )}
                             </form>
                         </Card>
                     </motion.div>
