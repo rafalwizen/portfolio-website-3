@@ -9,7 +9,6 @@ import { Card } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
-import { useToast } from "@/hooks/use-toast"
 import emailjs from "@emailjs/browser"
 
 interface ContactSectionProps {
@@ -53,7 +52,6 @@ export function ContactSection({ translations }: ContactSectionProps) {
         email: "",
         message: "",
     })
-    const { toast } = useToast()
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target
@@ -79,10 +77,6 @@ export function ContactSection({ translations }: ContactSectionProps) {
                 () => {
                     console.log("Wiadomość wysłana pomyślnie")
                     setSubmitStatus("success")
-                    toast({
-                        title: translations.messages.success.title,
-                        description: translations.messages.success.description,
-                    })
                     setFormData({
                         domain: "Portfolio Rafał",
                         name: "",
@@ -94,11 +88,6 @@ export function ContactSection({ translations }: ContactSectionProps) {
                     console.log("Błąd podczas wysyłania wiadomości")
                     console.log(error)
                     setSubmitStatus("error")
-                    toast({
-                        title: translations.messages.error.title,
-                        description: translations.messages.error.description,
-                        variant: "destructive",
-                    })
                 },
             )
             .finally(() => {
