@@ -180,7 +180,7 @@ export function HeroSection({ translations }: HeroSectionProps) {
                                 size="lg"
                                 variant="outline"
                                 onClick={() => scrollToSection("portfolio")}
-                                className="px-6 sm:px-8 py-3 border-[hsl(188.74deg_94.5%_42.75%)] text-[hsl(188.74deg_94.5%_42.75%)] hover:bg-[hsl(188.74deg_94.5%_42.75%)] hover:text-black text-sm sm:text-base"
+                                className="px-6 sm:px-8 py-3 border-[hsl(188.74deg_94.5%_42.75%)] text-black hover:bg-[hsl(188.74deg_94.5%_42.75%)] hover:text-black text-sm sm:text-base"
                             >
                                 {translations.ctaSecondary}
                             </Button>

@@ -11,6 +11,7 @@ interface NavigationProps {
     translations: {
         home: string
         contact: string
+        menu: string
     }
 }
 
@@ -50,8 +51,9 @@ export function Navigation({ language, setLanguage, translations }: NavigationPr
                         <button
                             onClick={() => setLanguage(language === "pl" ? "en" : "pl")}
                             className="flex items-center space-x-1 text-sm font-medium text-gray-600 hover:text-[hsl(188.74deg_94.5%_42.75%)]"
+                            aria-label={translations.menu}
                         >
-                            <Globe className="w-4 h-4" />
+                            <Globe className="w-4 h-4" aria-hidden="true" />
                             <span>{language.toUpperCase()}</span>
                         </button>
                     </div>

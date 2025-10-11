@@ -29,6 +29,8 @@ interface ContactSectionProps {
             emailLabel?: string
             phoneLabel?: string
             locationLabel?: string
+            gitHubAreaLabel?: string
+            linkedInAreaLabel?: string
         }
         messages: {
             success: {
@@ -226,20 +228,24 @@ export function ContactSection({ translations }: ContactSectionProps) {
                                         href="https://github.com/rafalwizen"
                                         target="_blank"
                                         rel="noopener noreferrer"
+                                        aria-label={translations.info.gitHubAreaLabel}
                                         className="w-12 h-12 bg-[hsl(188.74deg_94.5%_42.75%)]/10 rounded-lg flex items-center justify-center hover:bg-[hsl(188.74deg_94.5%_42.75%)] hover:text-white transition-colors"
                                     >
-                                        <Github className="w-6 h-6" />
+                                        <Github className="w-6 h-6" aria-hidden="true" />
                                     </a>
+
                                     <a
                                         href="https://www.linkedin.com/in/rafał-wiżeń-637357258"
                                         target="_blank"
                                         rel="noopener noreferrer"
+                                        aria-label={translations.info.linkedInAreaLabel}
                                         className="w-12 h-12 bg-[hsl(188.74deg_94.5%_42.75%)]/10 rounded-lg flex items-center justify-center hover:bg-[hsl(188.74deg_94.5%_42.75%)] hover:text-white transition-colors"
                                     >
-                                        <Linkedin className="w-6 h-6" />
+                                        <Linkedin className="w-6 h-6" aria-hidden="true" />
                                     </a>
                                 </div>
                             </div>
+
                         </Card>
                     </motion.div>
                 </div>

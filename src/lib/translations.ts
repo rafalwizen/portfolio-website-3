@@ -3,6 +3,7 @@ export const translations = {
         nav: {
             home: "Strona główna",
             contact: "Kontakt",
+            menu: "Menu",
         },
         hero: {
             greeting: "Cześć, jestem Rafał",
@@ -66,6 +67,8 @@ export const translations = {
                 location: "Tarnowskie Góry, Polska",
                 locationLabel: "Lokalizacja",
                 phoneLabel: "Telefon",
+                gitHubAreaLabel: "Profil na GitHub",
+                linkedInAreaLabel: "Profil na LinkedIn",
             },
             messages: {
                 success: {
@@ -83,6 +86,7 @@ export const translations = {
         nav: {
             home: "Home",
             contact: "Contact",
+            menu: "Menu",
         },
         hero: {
             greeting: "Hi, I'm Rafał",
@@ -146,6 +150,8 @@ export const translations = {
                 location: "Tarnowskie Góry, Poland",
                 locationLabel: "Location",
                 phoneLabel: "Phone",
+                gitHubAreaLabel: "GitHub profile",
+                linkedInAreaLabel: "LinkedIn profile",
             },
             messages: {
                 success: {
