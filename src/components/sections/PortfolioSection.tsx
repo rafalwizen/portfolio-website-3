@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { ExternalLink, Github, ChevronLeft, ChevronRight } from "lucide-react"
+import { ExternalLink, ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card"
 import Image from "next/image"
@@ -13,7 +13,6 @@ interface PortfolioSectionProps {
         title: string
         subtitle: string
         viewLive: string
-        viewCode: string
     }
     language: "pl" | "en"
 }
@@ -186,22 +185,13 @@ export function PortfolioSection({ translations, language }: PortfolioSectionPro
                                         <Button
                                             size="sm"
                                             variant="default"
-                                            className="bg-[hsl(188.74deg_94.5%_42.75%)] hover:bg-[hsl(188.74deg_94.5%_35%)] text-white"
+                                            className="bg-brand hover:bg-brand-dark text-brand-foreground"
                                             onClick={() => window.open(project.liveUrl, "_blank")}
                                         >
-                                            <ExternalLink className="w-4 h-4 mr-2" />
+                                            <ExternalLink className="w-4 h-4 mr-2" aria-hidden="true" />
                                             {translations.viewLive}
                                         </Button>
                                     )}
-                                    {/*<Button*/}
-                                    {/*    size="sm"*/}
-                                    {/*    variant="outline"*/}
-                                    {/*    className="border-[hsl(188.74deg_94.5%_42.75%)] text-[hsl(188.74deg_94.5%_42.75%)] hover:bg-[hsl(188.74deg_94.5%_42.75%)] hover:text-white"*/}
-                                    {/*    onClick={() => window.open(project.codeUrl[language], "_blank")}*/}
-                                    {/*>*/}
-                                    {/*    <Github className="w-4 h-4 mr-2" />*/}
-                                    {/*    {translations.viewCode}*/}
-                                    {/*</Button>*/}
                                 </CardFooter>
                             </Card>
                         </motion.div>

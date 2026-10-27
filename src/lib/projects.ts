@@ -5,8 +5,8 @@ export const projects = [
             en: "Sweet creations",
         },
         description: {
-            pl: "To wyjątkowa strona, którą zaprojektowałem z myślą o pasji mojej żony do artystycznych tortów. Intuicyjna galeria i prosta sekcja kontaktowa pozwalają dzielić się jej cukierniczym talentem i ułatwiają dotarcie do nowych klientów",
-            en: "This is a unique website I designed with my wife's passion for artistic cakes in mind. An intuitive gallery and a simple contact section make it easy to showcase her baking talent and reach new clients",
+            pl: "Strona-wizytówka pracowni tortów artystycznych. Intuicyjna galeria pięknie prezentuje każde dzieło, a klienci zamawiają bezpośrednio przez stronę.",
+            en: "A website for an artistic cake studio. The intuitive gallery beautifully showcases every creation, and clients order directly through the site.",
         },
         image: "/placeholder.svg?height=300&width=500",
         images: [
@@ -25,8 +25,8 @@ export const projects = [
             en: "Photography portfolio",
         },
         description: {
-            pl: "Strona internetowa stworzona z myślą o prezentacji fotograficznego portfolio mojego szwagra. Zawiera oryginalnie zaprojektowaną galerię, osobistą sekcję oraz formularz kontaktowy – razem tworzą spójną i nowoczesną wizytówkę online",
-            en: "A website created to showcase my brother-in-law’s photography portfolio. It features a uniquely designed gallery, a personal section, and a contact form – together forming a cohesive and modern online showcase",
+            pl: "Portfolio fotografa z oryginalnie zaprojektowaną galerią i formularzem kontaktowym. Nowoczesna wizytówka online, która pomaga pozyskiwać klientów.",
+            en: "A photographer's portfolio with a uniquely designed gallery and a contact form. A modern online presence that helps attract clients.",
         },
         image: "/placeholder.svg?height=300&width=500",
         images: [
@@ -46,8 +46,8 @@ export const projects = [
             en: "Restaurant website",
         },
         description: {
-            pl: "Strona zrobiona dla klienta z Tarnowskich Gór. Responsywna i estetyczna strona internetowa dla lokalnej pizzerii. Zawiera menu oraz mapę dojazdu. Projekt zoptymalizowany pod kątem urządzeń mobilnych i SEO",
-            en: "A website created for a client from Tarnowskie Góry, responsive and visually appealing website for a local pizzeria. It features a menu and a location map. The project is optimized for mobile devices and SEO",
+            pl: "Strona lokalnej pizzerii z menu, mapą dojazdu i wersją mobilną. Zoptymalizowana pod Google — klienci z okolic łatwiej ją znajdą.",
+            en: "A local pizzeria website with a menu, location map and mobile version. Optimized for Google so nearby customers can find it easily.",
         },
         image: "/placeholder.svg?height=300&width=500",
         images: [

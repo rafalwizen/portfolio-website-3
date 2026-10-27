@@ -38,9 +38,9 @@ export function ServicesSection({ translations }: ServicesSectionProps) {
                             transition={{ duration: 0.8, delay: index * 0.2 }}
                             viewport={{ once: true }}
                         >
-                            <Card className="h-full hover:shadow-lg transition-shadow border-t-4 border-t-[hsl(188.74deg_94.5%_42.75%)]">
+                            <Card className="h-full hover:shadow-lg transition-shadow border-t-4 border-t-brand">
                                 <CardHeader>
-                                    <div className="w-12 h-12 bg-[hsl(188.74deg_94.5%_42.75%)] text-white rounded-lg flex items-center justify-center mb-4">
+                                    <div className="w-12 h-12 bg-brand text-brand-foreground rounded-lg flex items-center justify-center mb-4 font-semibold">
                                         {index + 1}
                                     </div>
                                     <CardTitle className="text-xl">{step.title}</CardTitle>

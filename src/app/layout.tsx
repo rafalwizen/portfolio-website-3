@@ -22,10 +22,10 @@ export const metadata: Metadata = {
         siteName: "Rafał Wiżeń Web Design",
         images: [
             {
-                url: "https://rafal-wizen.vercel.app/images/screenshot7.jpg",
+                url: "/og-image.webp",
                 width: 1200,
                 height: 630,
-                alt: "Nowoczesna strona internetowa cukierni stworzona przez pasjonata!",
+                alt: "Rafał Wiżeń — tworzenie stron internetowych, wizytówek i portfolio",
             },
         ],
     },

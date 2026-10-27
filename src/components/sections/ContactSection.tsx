@@ -19,16 +19,22 @@ interface ContactSectionProps {
             name: string
             email: string
             message: string
+            namePlaceholder: string
+            emailPlaceholder: string
+            messagePlaceholder: string
             send: string
             sending: string
+            note: string
         }
         info: {
             email: string
             phone: string
+            phoneHref: string
+            emailHref: string
             location: string
-            emailLabel?: string
-            phoneLabel?: string
-            locationLabel?: string
+            emailLabel: string
+            locationLabel: string
+            phoneLabel: string
             gitHubAreaLabel?: string
             linkedInAreaLabel?: string
         }
@@ -77,7 +83,6 @@ export function ContactSection({ translations }: ContactSectionProps) {
             .sendForm(serviceID, templateID, form, userID)
             .then(
                 () => {
-                    console.log("Wiadomość wysłana pomyślnie")
                     setSubmitStatus("success")
                     setFormData({
                         domain: "Portfolio Rafał",
@@ -87,7 +92,6 @@ export function ContactSection({ translations }: ContactSectionProps) {
                     })
                 },
                 (error) => {
-                    console.log("Błąd podczas wysyłania wiadomości")
                     console.log(error)
                     setSubmitStatus("error")
                 },
@@ -118,7 +122,7 @@ export function ContactSection({ translations }: ContactSectionProps) {
                         transition={{ duration: 0.8 }}
                         viewport={{ once: true }}
                     >
-                        <Card className="p-6 shadow-lg border-t-4 border-t-[hsl(188.74deg_94.5%_42.75%)]">
+                        <Card className="p-6 shadow-lg border-t-4 border-t-brand">
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <input type="hidden" name="domain" value={formData.domain} />
                                 <div>
@@ -130,8 +134,9 @@ export function ContactSection({ translations }: ContactSectionProps) {
                                         name="name"
                                         value={formData.name}
                                         onChange={handleInputChange}
+                                        placeholder={translations.form.namePlaceholder}
                                         required
-                                        className="mt-1 border-gray-300 focus:border-[hsl(188.74deg_94.5%_42.75%)] focus:ring-[hsl(188.74deg_94.5%_42.75%)]"
+                                        className="mt-1 border-gray-300 focus:border-brand focus:ring-brand"
                                     />
                                 </div>
                                 <div>
@@ -144,8 +149,9 @@ export function ContactSection({ translations }: ContactSectionProps) {
                                         type="email"
                                         value={formData.email}
                                         onChange={handleInputChange}
+                                        placeholder={translations.form.emailPlaceholder}
                                         required
-                                        className="mt-1 border-gray-300 focus:border-[hsl(188.74deg_94.5%_42.75%)] focus:ring-[hsl(188.74deg_94.5%_42.75%)]"
+                                        className="mt-1 border-gray-300 focus:border-brand focus:ring-brand"
                                     />
                                 </div>
                                 <div>
@@ -158,26 +164,28 @@ export function ContactSection({ translations }: ContactSectionProps) {
                                         rows={5}
                                         value={formData.message}
                                         onChange={handleInputChange}
+                                        placeholder={translations.form.messagePlaceholder}
                                         required
-                                        className="mt-1 border-gray-300 focus:border-[hsl(188.74deg_94.5%_42.75%)] focus:ring-[hsl(188.74deg_94.5%_42.75%)]"
+                                        className="mt-1 border-gray-300 focus:border-brand focus:ring-brand"
                                     />
                                 </div>
                                 <Button
                                     type="submit"
                                     disabled={isSubmitting}
-                                    className="w-full bg-[hsl(188.74deg_94.5%_42.75%)] text-white hover:bg-[hsl(188.74deg_94.5%_35%)] disabled:opacity-50 disabled:cursor-not-allowed"
+                                    className="w-full bg-brand text-brand-foreground hover:bg-brand-dark disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
                                     {isSubmitting ? translations.form.sending : translations.form.send}
                                 </Button>
+                                <p className="text-sm text-gray-500 text-center">{translations.form.note}</p>
 
                                 {submitStatus === 'success' && (
-                                    <div className="mb-6 p-4 bg-[hsl(188.74deg_94.5%_42.75%_/0.4)] rounded-md">
+                                    <div className="p-4 bg-brand/40 rounded-md" role="status">
                                         <div className="font-semibold text-gray-900">{translations.messages.success.title}</div>
                                         <div className="text-gray-600">{translations.messages.success.description}</div>
                                     </div>
                                 )}
                                 {submitStatus === 'error' && (
-                                    <div className="mb-6 p-4 bg-[hsl(188.74deg_94.5%_42.75%_/0.4)] rounded-md">
+                                    <div className="p-4 bg-red-100 rounded-md" role="alert">
                                         <div className="font-semibold text-gray-900">{translations.messages.error.title}</div>
                                         <div className="text-gray-600">{translations.messages.error.description}</div>
                                     </div>
@@ -195,29 +203,39 @@ export function ContactSection({ translations }: ContactSectionProps) {
                     >
                         <Card className="p-6 shadow-lg">
                             <div className="flex items-center space-x-4 mb-6">
-                                <div className="w-12 h-12 bg-[hsl(188.74deg_94.5%_42.75%)]/10 rounded-lg flex items-center justify-center">
-                                    <Mail className="w-6 h-6 text-[hsl(188.74deg_94.5%_42.75%)]" />
+                                <div className="w-12 h-12 bg-brand/10 rounded-lg flex items-center justify-center">
+                                    <Mail className="w-6 h-6 text-brand" aria-hidden="true" />
                                 </div>
                                 <div>
-                                    <div className="font-semibold text-gray-900">{translations.info.emailLabel || "Email"}</div>
-                                    <div className="text-gray-600">{translations.info.email}</div>
+                                    <div className="font-semibold text-gray-900">{translations.info.emailLabel}</div>
+                                    <a
+                                        href={translations.info.emailHref}
+                                        className="text-gray-600 hover:text-brand transition-colors"
+                                    >
+                                        {translations.info.email}
+                                    </a>
                                 </div>
                             </div>
                             <div className="flex items-center space-x-4 mb-6">
-                                <div className="w-12 h-12 bg-[hsl(188.74deg_94.5%_42.75%)]/10 rounded-lg flex items-center justify-center">
-                                    <Phone className="w-6 h-6 text-[hsl(188.74deg_94.5%_42.75%)]" />
+                                <div className="w-12 h-12 bg-brand/10 rounded-lg flex items-center justify-center">
+                                    <Phone className="w-6 h-6 text-brand" aria-hidden="true" />
                                 </div>
                                 <div>
-                                    <div className="font-semibold text-gray-900">{translations.info.phoneLabel || "Phone"}</div>
-                                    <div className="text-gray-600">{translations.info.phone}</div>
+                                    <div className="font-semibold text-gray-900">{translations.info.phoneLabel}</div>
+                                    <a
+                                        href={translations.info.phoneHref}
+                                        className="text-gray-600 hover:text-brand transition-colors"
+                                    >
+                                        {translations.info.phone}
+                                    </a>
                                 </div>
                             </div>
                             <div className="flex items-center space-x-4 mb-8">
-                                <div className="w-12 h-12 bg-[hsl(188.74deg_94.5%_42.75%)]/10 rounded-lg flex items-center justify-center">
-                                    <MapPin className="w-6 h-6 text-[hsl(188.74deg_94.5%_42.75%)]" />
+                                <div className="w-12 h-12 bg-brand/10 rounded-lg flex items-center justify-center">
+                                    <MapPin className="w-6 h-6 text-brand" aria-hidden="true" />
                                 </div>
                                 <div>
-                                    <div className="font-semibold text-gray-900">{translations.info.locationLabel || "Location"}</div>
+                                    <div className="font-semibold text-gray-900">{translations.info.locationLabel}</div>
                                     <div className="text-gray-600">{translations.info.location}</div>
                                 </div>
                             </div>
@@ -229,7 +247,7 @@ export function ContactSection({ translations }: ContactSectionProps) {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         aria-label={translations.info.gitHubAreaLabel}
-                                        className="w-12 h-12 bg-[hsl(188.74deg_94.5%_42.75%)]/10 rounded-lg flex items-center justify-center hover:bg-[hsl(188.74deg_94.5%_42.75%)] hover:text-white transition-colors"
+                                        className="w-12 h-12 bg-brand/10 text-gray-700 rounded-lg flex items-center justify-center hover:bg-brand hover:text-brand-foreground transition-colors"
                                     >
                                         <Github className="w-6 h-6" aria-hidden="true" />
                                     </a>
@@ -239,7 +257,7 @@ export function ContactSection({ translations }: ContactSectionProps) {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         aria-label={translations.info.linkedInAreaLabel}
-                                        className="w-12 h-12 bg-[hsl(188.74deg_94.5%_42.75%)]/10 rounded-lg flex items-center justify-center hover:bg-[hsl(188.74deg_94.5%_42.75%)] hover:text-white transition-colors"
+                                        className="w-12 h-12 bg-brand/10 text-gray-700 rounded-lg flex items-center justify-center hover:bg-brand hover:text-brand-foreground transition-colors"
                                     >
                                         <Linkedin className="w-6 h-6" aria-hidden="true" />
                                     </a>

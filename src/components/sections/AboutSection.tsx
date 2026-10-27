@@ -9,7 +9,6 @@ interface AboutSectionProps {
         title: string
         subtitle: string
         skills: string[]
-        technologies: string
     }
 }
 
@@ -48,10 +47,10 @@ export function AboutSection({ translations }: AboutSectionProps) {
                                 >
                                     <div className="flex-shrink-0 mt-1">
                                         <div className="relative">
-                                            <div className="w-6 h-6 bg-gradient-to-r from-[hsl(188.74deg_94.5%_42.75%)] to-blue-500 rounded-full flex items-center justify-center">
-                                                <Check className="w-3.5 h-3.5 text-white" />
+                                            <div className="w-6 h-6 bg-gradient-to-r from-brand to-blue-500 rounded-full flex items-center justify-center">
+                                                <Check className="w-3.5 h-3.5 text-white" aria-hidden="true" />
                                             </div>
-                                            <div className="absolute inset-0 bg-gradient-to-r from-[hsl(188.74deg_94.5%_42.75%)] to-blue-500 rounded-full blur-sm opacity-30 animate-pulse"></div>
+                                            <div className="absolute inset-0 bg-gradient-to-r from-brand to-blue-500 rounded-full blur-sm opacity-30 animate-pulse"></div>
                                         </div>
                                     </div>
                                     <p className="text-gray-700 leading-relaxed">{skill}</p>
@@ -69,7 +68,7 @@ export function AboutSection({ translations }: AboutSectionProps) {
                     >
                         <Image
                             src="/images/workspace.webp?height=500&width=500"
-                            alt="Developer workspace"
+                            alt="Workspace"
                             width={500}
                             height={500}
                             className="rounded-lg shadow-lg"
