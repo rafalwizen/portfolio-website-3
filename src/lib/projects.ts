@@ -42,8 +42,8 @@ export const projects = [
     },
     {
         title: {
-            pl: "Strona pizzerii",
-            en: "Restaurant website",
+            pl: "Prostokątna – strona pizzerii",
+            en: "Prostokątna – pizzeria website",
         },
         description: {
             pl: "Strona lokalnej pizzerii z menu, mapą dojazdu i wersją mobilną. Zoptymalizowana pod Google — klienci z okolic łatwiej ją znajdą.",
@@ -51,11 +51,11 @@ export const projects = [
         },
         image: "/placeholder.svg?height=300&width=500",
         images: [
-            "/images/screenshot4.jpg?height=300&width=500&text=Slice-pizza-website-photo-1",
-            "/images/screenshot5.jpg?height=300&width=500&text=Slice-pizza-website-photo-2",
-            "/images/screenshot6.jpg?height=300&width=500&text=Slice-pizza-website-photo-3",
+            "/images/screenshot4.jpg",
+            "/images/screenshot5.jpg",
+            "/images/screenshot6.jpg",
         ],
-        liveUrl: "https://slicepizzatg.pl/",
+        liveUrl: "https://prostokatna.pl/",
         codeUrl: {
             pl: "https://github.com/rafalwizen/restaurant-coupons-server",
             en: "https://github.com/rafalwizen/restaurant-coupons-server"
