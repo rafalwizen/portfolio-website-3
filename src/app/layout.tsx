@@ -8,14 +8,14 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
     title: "Rafał Wiżeń – Tworzenie stron internetowych, wizytówek i portfolio",
     description:
-        "Projektuję nowoczesne, szybkie i dopasowane do potrzeb strony internetowe – wizytówki, portfolio i strony firmowe. Pomagam budować profesjonalną obecność online dla małych firm i twórców.",
+        "Projektuję nowoczesne, szybkie i dopasowane do potrzeb strony internetowe – wizytówki, portfolio i strony firmowe. Strony dla firm z Tarnowskich Gór i okolic. Pomagam budować profesjonalną obecność online dla małych firm i twórców.",
     keywords:
-        "tworzenie stron internetowych, strony wizytówki, portfolio online, strony firmowe, projektowanie stron, Rafał Wiżeń, web developer, front-end, Next.js, React, strony dla firm, strony dla freelancerów",
+        "tworzenie stron internetowych, strony wizytówki, portfolio online, strony firmowe, projektowanie stron, Rafał Wiżeń, web developer, front-end, Next.js, React, strony dla firm, strony dla freelancerów, tworzenie stron Tarnowskie Góry, strony internetowe Śląsk",
     authors: [{ name: "Rafał Wiżeń", url: "https://rafal-wizen.vercel.app" }],
     openGraph: {
         title: "Rafał Wiżeń – Tworzenie stron internetowych i portfolio",
         description:
-            "Strony internetowe dopasowane do Ciebie – szybkie, estetyczne i skuteczne. Sprawdź moją ofertę tworzenia stron wizytówek i portfolio.",
+            "Strony internetowe dopasowane do Ciebie – szybkie, estetyczne i skuteczne. Tworzenie stron dla firm z Tarnowskich Gór i okolic. Sprawdź moją ofertę.",
         type: "website",
         locale: "pl_PL",
         url: "https://rafal-wizen.vercel.app/",
